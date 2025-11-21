@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro al Evento</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -15,20 +15,20 @@
 
         <fieldset>
             <legend>Datos personales</legend>
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" aria-required="true">
+            <label for="">Nombre completo:</label>
+            <input type="" id="nombre" name="nombre" required placeholder="Tu nombre" aria-required="true">
 
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
 
-            <label for="fecha">Fecha de nacimiento:</label>
+            <label for="">Fecha de nacimiento:</label>
             <input type="date" id="fecha" name="fecha">
         </fieldset>
 
         <fieldset>
             <legend>Información del evento</legend>
 
-            <label for="categoria">Tipo de entrada:</label>
+            <label for="">Tipo de entrada:</label>
             <select id="categoria" name="categoria" required>
                 <option value="">Selecciona una opción</option>
                 <option value="general">General</option>
@@ -37,7 +37,7 @@
             </select>
 
             <label for="foto">Sube tu foto (opcional):</label>
-            <input type="file" id="foto" name="foto" accept="image/*">
+            <input type="file" id="foto" name="foto" accept="image/">
 
             <label for="satisfaccion">¿Qué tanto te interesa este evento? (0-10)</label>
             <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="10">
@@ -50,7 +50,7 @@
                 placeholder="Escribe aquí tus comentarios..."></textarea>
         </fieldset>
 
-        <button type="submit">Enviar registro</button>
+        <button type="">Enviar registro</button>
         <small>Todos los campos marcados son obligatorios.</small>
     </form>
 
