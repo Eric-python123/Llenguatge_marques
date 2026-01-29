@@ -1,60 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro al Evento</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gestión de un partido</title>
+    <link rel="stylesheet" href="estils.css">
 </head>
 
 <body>
+    <header>
+        <h1>Gestión del Partido</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Marcador Chulo</h2>
+            <div class="marcador">
+                <div>
+                    <h3>Equipo 1</h3>
+                    <p id="puntos1">0</p>
+                    <button id="sumar1">+1 punto</button>
+                </div>
 
-    <form aria-label="Formulario de registro al evento">
-        <h1>Registro al Evento Tech 2025</h1>
 
-        <fieldset>
-            <legend>Datos personales</legend>
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" aria-required="true">
+                <div>
+                    <h3>Equipo 2</h3>
+                    <p id="puntos2">0</p>
+                    <button id="sumar2">+1 punto</button>
+                </div>
+            </div>
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+            <button id="reiniciar">Reiniciar marcador</button>
+            
+            <p id="mensaje" aria-live="polite"></p>
+        </section>
 
-            <label for="fecha">Fecha de nacimiento:</label>
-            <input type="date" id="fecha" name="fecha">
-        </fieldset>
+        <section>
+            <h2>Jugadores</h2>
 
-        <fieldset>
-            <legend>Información del evento</legend>
+            <form id="formJugador">
+                <label for="nombreJugador">Nombre del jugador:</label>
+                <input type="text" id="nombreJugador">
+                <button type="submit">Añadir</button>
+            </form>
 
-            <label for="categoria">Tipo de entrada:</label>
-            <select id="categoria" name="categoria" required>
-                <option value="">Selecciona una opción</option>
-                <option value="general">General</option>
-                <option value="vip">VIP</option>
-                <option value="estudiante">Estudiante</option>
-            </select>
+            <ul id="listaJugadores"></ul>
+        </section>
 
-            <label for="foto">Sube tu foto (opcional):</label>
-            <input type="file" id="foto" name="foto" accept="image/*">
+    </main>
 
-            <label for="satisfaccion">¿Qué tanto te interesa este evento? (0-10)</label>
-            <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="10">
-        </fieldset>
+    <footer>
+        <p>Club deportivo</p>
+    </footer>
 
-        <fieldset>
-            <legend>Comentarios adicionales</legend>
-            <label for="comentarios">Mensaje:</label>
-            <textarea id="comentarios" name="comentarios" rows="3"
-                placeholder="Escribe aquí tus comentarios..."></textarea>
-        </fieldset>
-
-        <button type="submit">Enviar registro</button>
-        <small>Todos los campos marcados son obligatorios.</small>
-    </form>
-
+    <script src="gestor_partit.js"></script>
 </body>
 
 </html>
-
