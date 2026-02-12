@@ -1,59 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de un partido</title>
+    <title>Registro Evento Molón</title>
     <link rel="stylesheet" href="estils.css">
 </head>
-
 <body>
-    <header>
-        <h1>Gestión del Partido</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Marcador Chulo</h2>
-            <div class="marcador">
-                <div>
-                    <h3>Equipo 1</h3>
-                    <p id="puntos1">0</p>
-                    <button id="sumar1">+1 punto</button>
-                </div>
 
+<header>
+    <h1>Registro al Evento Tecnológico Molón</h1>
+</header>
 
-                <div>
-                    <h3>Equipo 2</h3>
-                    <p id="puntos2">0</p>
-                    <button id="sumar2">+1 punto</button>
-                </div>
-            </div>
+<form id="formulario">
 
-            <button id="reiniciar">Reiniciar marcador</button>
-            
-            <p id="mensaje" aria-live="polite"></p>
-        </section>
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre" required
+           pattern="[A-Za-z ]+">
+    <div class="error" id="errorNombre"></div>
 
-        <section>
-            <h2>Jugadores</h2>
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" required>
+    <div class="error" id="errorEmail"></div>
 
-            <form id="formJugador">
-                <label for="nombreJugador">Nombre del jugador:</label>
-                <input type="text" id="nombreJugador">
-                <button type="submit">Añadir</button>
-            </form>
+    <label for="edad">Edad</label>
+    <input type="number" id="edad" min="18" max="120" required>
+    <div class="error" id="errorEdad"></div>
 
-            <ul id="listaJugadores"></ul>
-        </section>
+    <label for="fecha">Fecha del evento</label>
+    <input type="date" id="fecha" required>
+    <div class="error" id="errorFecha"></div>
 
-    </main>
+    <label for="entrada">Tipo de entrada</label>
+    <select id="entrada" required>
+        <option value="">Selecciona una opción</option>
+        <option value="general">General</option>
+        <option value="vip">VIP</option>
+    </select>
+    <div class="error" id="errorEntrada"></div>
 
-    <footer>
-        <p>Club deportivo</p>
-    </footer>
+    <label for="comentarios">Comentarios</label>
+    <textarea id="comentarios" rows="4" minlength="10" required></textarea>
+    <div class="error" id="errorComentarios"></div>
 
-    <script src="gestor_partit.js"></script>
+    <button type="submit">Enviar</button>
+
+    <div class="success" id="mensajeFinal"></div>
+</form>
+
+<script src="validacion.js"></script>
 </body>
-
 </html>
